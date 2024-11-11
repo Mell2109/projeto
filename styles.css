@@ -1,0 +1,175 @@
+:root {
+    --cor-texto: rgba(233, 11, 11, 0.856); 
+    --fonte-titulo: "Aboreto", system-ui;
+    --fonte-texto:"Ysabeau SC", sans-serif,"Life Savers", serif;;
+}
+
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    text-align: center;
+    color: black;
+}
+
+
+
+p, h3 {
+   font-family: var(--fonte-texto);
+    text-align: center
+    
+}
+div {
+    font-family: var(--fonte-texto);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid darkgoldenrod;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #000000;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+.nav-buttons, .nav-buttons2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nav-buttons .button, .nav-buttons2 {
+    display: inline-block;
+    padding:  10px 20px;
+    margin: 5px;
+    background-color: rgb(231, 150, 91);
+    color: rgb(1, 1, 26);
+    text-decoration:  none;
+    border-radius:  4px;
+}
+
+.container-images {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.card-images {
+    text-align: center;
+    margin: 20px 0;
+}
+.image {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 25px;
+    text-align: center;
+}
+
+.text{
+    display: inline-block;
+    text-align: left;
+}
+
+ .text2 {
+    display: inline-block;
+    text-align: center;
+
+}
+.text3 {
+    display: inline-block;
+    text-align: right;
+    
+}
+
+button:hover {
+    background-color: orange;
+    color: black;
+    border-radius: 8px;
+
+}
+
+input:invalid, textarea:invalid {
+    background-color: rgb(247, 215, 220)
+  }
+  
+ 
+  .nav-buttons2 {
+    display: inline-block;
+    padding:  5px 10px;
+    margin: 5px;
+    background-color: rgb(231, 150, 91);
+    color: rgb(1, 1, 26);
+    text-decoration:  none;
+    border-radius:  4px;
+}
+
+header {
+    background-color:rgb(250, 190, 121);
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color:rgb(250, 190, 121);
+    color: rgb(255, 255, 255);
+}
+
+    @media(max-width: 600px){
+        nav ul {
+            flex-direction: column;
+            text-align: center;
+         
+    }
+}
+
+[data-bs-theme="dark"] {
+    color: bisque;
+}
