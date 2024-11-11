@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="port-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Criando tabelasssssssss</h1>
+    <table border="2" id="corpoTabela">
+        <thead>
+            <th> Nome</th>
+            <th> Email</th>
+            <th> Mensagem </th>
+            <th> Data </th>
+        </thead>
+        <tr>
+         <tbody> </tbody>
+      </table>
+      <script>
+        let dados = [
+        {nome: "mell", email: "mell22@simnao", mensagem: "MEUDEUS", data: "2024-10-23 11:53" },
+        {nome: "lina", email: "mell221@simnao", mensagem: "putz", data: "2024-10-23 11:53" },
+        {nome: "lilo", email: "mell223@simnao", mensagem: "deured", data: "2024-10-23 11:53" },
+
+
+];
+        document.getElementById('corpoTabela').getElementsByTagName('tbody')[0]
+        for (let i=0; i <dados.length; i++ ) {
+        corpoTabela.innerHTML +=`
+  
+        <tr>
+            <td>${dados[i].nome} </td>
+            <td>${dados[i].email} </td> 
+            <td>${dados[i].mensagem} </td>  
+            <td>${dados[i].data} </td>      
+            </tr>  
+              
+`
+}
+                </script>
+</body>
+</html>

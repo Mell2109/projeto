@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+ <script type="module">
+
+	import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+    // Conecte ao Firestore
+    const db = getFirestore(app);
+
+ // Manipular o envio do formulário
+    document.getElementById('meuFormulario').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+  // Capturar os dados do formulário
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+  const mensagem = document.getElementById('mensagem').value;
+
+  try {
+    // Enviar os dados para o Firestore
+    await addDoc(collection(db, 'contatos'), {
+      nome: nome,
+      email: email,
+      mensagem: mensagem,
+      timestamp: serverTimestamp() // adiciona um carimbo de tempo
+    });
+    alert('Dados enviados com sucesso!');
+    document.getElementById('meuFormulario').reset(); // Limpa o formulário
+  } catch (error) {
+    console.error('Erro ao enviar os dados: ', error);
+  }
+});
+
+    
+  </script>
+</body>
+</html>
